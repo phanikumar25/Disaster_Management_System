@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "postgresql": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://user:pass@localhost:5432/disaster_db"]
+    },
+    "ollama": {
+      "command": "uvx",
+      "args": ["ollama-mcp-server"]
+    },
+    "disaster-tools": {
+      "command": "python",
+      "args": ["src/tools/mcp_server.py"],
+      "env": { "PYTHONPATH": "." }
+    }
+  }
+}

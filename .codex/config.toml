@@ -1,0 +1,9 @@
+[project]
+# Fallback if AGENTS.md is missing
+project_doc_fallback_filenames = ["CLAUDE.md"]
+
+[policy]
+# "untrusted" (ask first) or "on-request" (auto-approve)
+approval_policy = "untrusted"
+# "read-only" or "workspace-write"
+sandbox_mode = "workspace-write"
